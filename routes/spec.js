@@ -6,4 +6,13 @@ router.get('/', function(req, res, next) {
   res.render('spec');
 });
 
+router.post('/new', function(req, res, next) {
+    console.log('test');
+    var newSpec = {
+		nation: req.body.lblnation,
+		province: req.body.lblprovince,
+		age: req.body.lblage
+	};
+
+
 module.exports = router;
