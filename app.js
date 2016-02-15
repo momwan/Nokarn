@@ -13,6 +13,7 @@ var monk = require('monk');
 var db = monk('localhost:27017/nokarn');
 var spec = require('./routes/spec');
 var regis = require('./routes/regis');
+var profile = require('./routes/profile');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/spec',spec);
 app.use('/regis',regis);
+app.use('/profile',profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
