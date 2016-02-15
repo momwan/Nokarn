@@ -12,6 +12,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/nokran');
 var spec = require('./routes/spec');
+var regis = require('./routes/regis');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use(function(req, res, next){
 app.use('/', routes);
 app.use('/users', users);
 app.use('/spec',spec);
+app.use('/regis',regis);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
