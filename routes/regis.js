@@ -3,7 +3,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
-  res.render('profile'});
+  	var username = req.body.username;
+    var password = req.body.password;
+
+    var db = req.db;
+    var collection = db.get('users');
+
+    collection.insert({
+        username: username,
+        password: password
+    }, function(err, docs)
+    	if(err) {
+            res.send("There was a problem adding the information to the database.");
+        } else {
+            // redirect to /users 
+            res.redirect('Profile');
+        }
+    })
 });
 
 
