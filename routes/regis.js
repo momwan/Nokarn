@@ -6,24 +6,22 @@ router.post('/', function(req, res, next) {
   	var username = req.body.username;
     var password = req.body.password;
 
-    var db = req.db;
-    var collection = db.get('users');
+console.log('value :'+ req.body.a);
+    // var db = req.db;
+    // var collection = db.get('users');
 
-    collection.insert({
-        username: username,
-        password: password
-    }, function(err, docs)
-    	if(err) {
-            res.send("There was a problem adding the information to the database.");
-        } else {
-            // redirect to /users 
-            res.redirect('Profile');
-        }
-    })
+    // collection.insert({
+    //     username: username,
+    //     password: password
+    // }, function(err, docs)
+    // 	if(err) {
+    // 		console.log('value :'+ req.body.a);
+    //         res.send("There was a problem adding the information to the database.");
+    //     } else {
+    //         // redirect to /users 
+    //         res.redirect('profile');
+    //     }
+    // })
 });
 
-
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
 module.exports = router;
