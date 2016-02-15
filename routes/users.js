@@ -9,9 +9,9 @@ router.post('/', function(req, res, next) {
     var password = req.body.password;
     collection.find({ username: username, password: password }, function(e, docs) {
         if (docs.length > 0) {
-            res.render('/index');
+            res.render('index');
         } else {
-            res.render('/regis');
+            res.render('regis');
         }
        
     });
