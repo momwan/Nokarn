@@ -1,7 +1,10 @@
 extends layout
 
 block content
-		form
+	h1 Spec LOVER
+
+
+		form(action='/spec/insert', method='post')
 			div
 				label Nation:
 				input(type="text", name="lblnation")
