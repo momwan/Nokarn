@@ -12,8 +12,8 @@ router.post('/', function(req, res, next) {
     	// console.log('U: ' + username );
     	// console.log('P: ' + password);
 
-    	if (!docs) { console.log('docs is empty');}
-    	if (docs.length > 0 ) { console.log('Docs count ' + docs.length);}
+    	// if (!docs) { console.log('docs is empty');}
+    	// if (docs.length > 0 ) { console.log('Docs count ' + docs.length);}
 
         if (docs.length > 0) {
             res.render('index');
