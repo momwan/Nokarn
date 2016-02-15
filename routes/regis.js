@@ -7,7 +7,7 @@ router.post('/', function(req, res, next) {
     var password = req.body.password;
     var btn = req.body.submit;
 
-    if(btn=="submit"){
+    if(btn="insert"){
 	    var db = req.db;
 	    var collection = db.get('users');
 
