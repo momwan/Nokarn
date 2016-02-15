@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/users');
+var db = monk('localhost:27017/nokran');
 var spec = require('./routes/spec');
 
 var app = express();
