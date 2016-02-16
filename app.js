@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var profile = require('./routes/profile');
 
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -35,6 +36,7 @@ app.use(function(req, res, next){
 app.use('/', routes);
 app.use('/users', users);
 app.use('/spec',spec);
+app.use('/profile',profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
