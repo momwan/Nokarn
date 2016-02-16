@@ -44,4 +44,8 @@ router.post('/insert', function(req, res, next) {
     }
 });
 
+router.get('/:username', function(req, res, next) {
+  res.render('profile' ,{username:req.params.username});
+});
+
 module.exports = router;
