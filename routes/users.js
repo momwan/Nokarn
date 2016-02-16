@@ -7,6 +7,7 @@ router.post('/', function(req, res, next) {
     var collection = db.get('users');
     var username = req.body.username;
     var password = req.body.password;
+    req.session.username = username;
     collection.find({ username: username, password: password },{}, function(e, docs) {
 
     	// console.log('U: ' + username );
