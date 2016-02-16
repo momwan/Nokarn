@@ -14,7 +14,8 @@ var db = monk('localhost:27017/nokarn');
 var spec = require('./routes/spec');
 var regis = require('./routes/regis');
 var profile = require('./routes/profile');
-
+var mongoose = require('mongoose');
+var excel = require('excel-builder');
 var app = express();
 
 // view engine setup
