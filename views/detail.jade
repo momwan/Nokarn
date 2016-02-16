@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 รายการที่ค้นหาได้ทั้งหมด 
+	p total: #{loverlist.length}
+	ul
+		- each spec in loverlist
+			li
+				a(href="mailto:#{spec.nation}") #{spec.nation} #{spec.province}

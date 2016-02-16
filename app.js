@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var profile = require('./routes/profile');
 
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -14,7 +15,8 @@ var db = monk('localhost:27017/nokarn');
 var spec = require('./routes/spec');
 var regis = require('./routes/regis');
 var profile = require('./routes/profile');
-
+var mongoose = require('mongoose');
+var excel = require('excel-builder');
 var app = express();
 
 // view engine setup
@@ -37,6 +39,7 @@ app.use(function(req, res, next){
 app.use('/', routes);
 app.use('/users', users);
 app.use('/spec',spec);
+
 app.use('/regis',regis);
 app.use('/profile',profile);
 

@@ -3,6 +3,7 @@ extends layout
 block content
 		form(action="/regis",method="post",)
 			center
+				P #{err}
 				div
 					label Username:
 					input(type="text", name="username")
