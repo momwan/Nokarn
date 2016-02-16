@@ -1,3 +1,3 @@
 # Nokarn
 
-* Test
+":)
