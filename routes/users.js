@@ -16,7 +16,7 @@ router.post('/', function(req, res, next) {
     	// if (docs.length > 0 ) { console.log('Docs count ' + docs.length);}
 
         if (docs.length > 0) {
-            res.render('index');
+            res.render('index',{username:docs});
         } else {
             res.render('regis');
         }
